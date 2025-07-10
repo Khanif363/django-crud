@@ -1,0 +1,39 @@
+<!---Heredamos de base.html --->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container py-5">
+    <section class="card card-body">
+    <h1 class="display-0.5 text-center">Django App</h1>
+<p>Hasta Aquí hemos hecho las validaciones en nuestro frontend
+36:48 Login y vista de Tareas
+Una vez que el usr se ha creado, hay que enviarlo a otra vista o pantalla donde pueda crear tareas, para lo cual en tasks/templates/tasks.html  se creo tasks.html
+- luego en /tasks/views.py se define la funcion tasks
+def tasks(request):
+return render(request, 'tasks.html')
+- Luego hay que agregarlo en el project djangocrud/urls.py
+38:44 modifica views.py
+41: 28 crear cookie en el navegador, agrega un metodo llamado login
+from django.contrib.auth import login
+43:00 Agregar al exept en manejo de errores, el integrity error de la bd
+45: 00 --- crear una plantilla para que todas las pag las puedan heredar
+</p>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="/signin/">
+        Ingresar
+    </a>
+    <a class="btn btn-primary" href="/signup/">
+        Registrarme
+    </a>
+</div>
+
+
+
+</section>
+
+</main>
+
+
+{% endblock %}

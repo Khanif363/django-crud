@@ -1,0 +1,23 @@
+<!-- Heredamos de base.html  --->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form method="POST" class="card card-body text-center">
+                <h1>Signup</h1>
+                {{error}}
+                {% csrf_token %} 
+                {{form.as_p}}
+                <button>
+                    Signup
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}
